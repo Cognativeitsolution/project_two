@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Local style sheet relative to workspace folder -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.min.css"/>
+    
+    
+    
+</head>
+
+<body>
+    <div class="container_login animate__animated animate__bounceIn" >
+        <h1 class="text_center">Employment Agency Tool</h1>
+        <h1 class="color_three text_center">Log-In</h1>
+        <div class="form">
+            
+            <div class="form_group">
+                <input type="email" id="email" class="form_control" name="text" placeholder="Email">
+            </div>
+            <div class="form_group">
+                <input type="password" id="password" class="form_control" name="text" placeholder="Password">
+            </div>
+            <label class="checkcontainer">Remember me
+                <input type="checkbox" checked="checked">
+                <span class="checkmark"></span>
+            </label>
+            <label class="checkcontainer pull_right">
+                <a href="#" class="text_right color_two"> Forgot Password</a>
+            </label>
+            
+            <p class="text_right mt0">Register yourself by cliking <a href="#" class="color_two"> Here</a></p>
+            
+            <img src="images/google-recaptcha.png" width="170" />
+            
+            <div class="text_center">
+                <h3>OR</h3>
+                <button type="submit" class="btn_light logo_google">SIGN-IN WITH GOOGLE</button>
+                <button type="submit" class="btn_light logo_link">SIGN-IN WITH LINKEDIN</button>
+                <button type="submit" id="submit" class="btn_primary">LOGIN</button>
+            </div>
+            
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#submit").click(function(){
+    var name = $("#name").val();
+    var email = $("#email").val();
+    var password = $("#password").val();
+    var confirm_password = $("#confirm_password").val();
+    
+    
+    if (email == '' ) {
+        alert('Email Field is Empty');
+    }
+    else if (password == '' ) {
+        alert('Password Field is Empty');
+    }
+    else if (email.indexOf('@') == -1 || email.indexOf('.') == -1) {
+        alert('Please Enter Valid Email Address');
+    }
+  });
+});
+</script>
